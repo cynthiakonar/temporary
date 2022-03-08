@@ -69,6 +69,7 @@ flutter:
   assets:
     - assets/mobilefacenet.tflite
     - assets/tempo_logo.png
+    - assets/tempo_name.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
