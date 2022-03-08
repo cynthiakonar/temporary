@@ -32,11 +32,12 @@ class FaceNetService {
     try {
       final gpuDelegateV2 = tflite.GpuDelegateV2(
         options: tflite.GpuDelegateOptionsV2(
-            false,
-            tflite.TfLiteGpuInferenceUsage.fastSingleAnswer,
-            tflite.TfLiteGpuInferencePriority.minLatency,
-            tflite.TfLiteGpuInferencePriority.auto,
-            tflite.TfLiteGpuInferencePriority.auto),
+            isPrecisionLossAllowed: false,
+            inferencePreference:
+                tflite.TfLiteGpuInferenceUsage.fastSingleAnswer,
+            inferencePriority1: tflite.TfLiteGpuInferencePriority.minLatency,
+            inferencePriority2: tflite.TfLiteGpuInferencePriority.auto,
+            inferencePriority3: tflite.TfLiteGpuInferencePriority.auto),
       );
 
       var interpreterOptions = tflite.InterpreterOptions()
